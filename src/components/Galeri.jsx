@@ -1,33 +1,38 @@
 import React, { useState, useEffect } from "react";
 import { HiOutlineX} from "react-icons/hi";
 import { RiBookOpenLine } from "react-icons/ri";
+import mainArt from "../assets/main-paintings.png"
+import wajah from "../assets/wajah.jpg"
+import topeng from "../assets/topeng.jpg"
+import baju from "../assets/baju.jpg"
+import ranting from "../assets/ranting.jpg"
+import latar from "../assets/latar.jpg"
 
 
 const Gallery = () => {
-  // Data gambar: 1 full + beberapa detail
   const images = [
     {
-      src: "",
+      src: mainArt,
       label: "Karya Utama Tampilan penuh lukisan “Topeng Sosial”",
     },
     {
-      src: "",
+      src: wajah,
       label: "Detail Wajah Fokus pada ekspresi dan warna kulit",
     },
     {
-      src: "",
+      src: topeng,
       label: "Detail Topeng. Bagian topeng sebagai simbol penutup diri",
     },
     {
-      src: "",
+      src: baju,
       label: "Detail Pakaian. Elemen pakaian dengan warna merah gelap",
     },
     {
-      src: "",
+      src: ranting,
       label: "Detail Ranting. Elemen Sekitar Simbol beban dan kerumitan",
     },
     {
-      src: "",
+      src: latar,
       label: "Detail Latar Background Suasana biru gelap yang melingkupi figur",
     },
   ];
@@ -110,10 +115,10 @@ const Gallery = () => {
               <img
                 src={mainImage.src}
                 alt={mainImage.label}
-                className="w-full h-[320px] md:h-[380px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-500"
+                className="block contrast-125 saturate-125 brightness-110 shadow-2xl shadow-black/50 rounded-xl  w-full h-[320px] md:h-[700px] object-cover object-center group-hover:scale-[1.5] transition-transform duration-600 backdrop-blur-sm"
               />
-              <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent md:opacity-0 opacity-100 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute bottom-4 left-4 right-4 md:opacity-0 backdrop-opacity-100 group-hover:opacity-100 transition-opacity duration-500">
                 <p className="text-xs uppercase tracking-[0.25em] text-gray-300">
                   Karya Utama
                 </p>
@@ -125,31 +130,34 @@ const Gallery = () => {
             </div>
           </div>
 
-          {/* Detail-detail lukisan */}
           <div className="grid grid-cols-2 gap-4">
             {detailImages.map((item, idx) => (
               <div
                 data-aos="zoom-in"
                 key={idx}
                 className="relative group rounded-xl overflow-hidden border border-white/10 cursor-pointer"
-                onClick={() => openPreview(idx + 1)} // +1 karena index 0 dipakai mainImage
+                onClick={() => openPreview(idx + 1)}
               >
                 <img
                   src={item.src}
                   alt={item.label}
-                  className="w-full h-[150px] md:h-[140px] object-cover object-center group-hover:scale-[1.05] transition-transform duration-500"
+                  className="
+                  block
+                  w-full h-[150px] md:h-full
+                  object-cover object-center
+                  group-hover:scale-[1.05]
+                  transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <span className="absolute bottom-3 left-3 text-[11px] uppercase tracking-[0.2em] text-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-black/60 md:opacity-0 opacity-100 md:group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="absolute bottom-3 left-3 text-[11px] uppercase tracking-[0.2em] text--200 md:opacity-0 opacity-100 group-hover:opacity-100 transition-opacity duration-300">
                   {item.label}
-                </span>
+                </span> 
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* POPUP / LIGHTBOX */}
       {activeIndex !== null && (
         <div
           className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-[999]"
@@ -172,10 +180,10 @@ const Gallery = () => {
               alt={images[activeIndex].label}
               className="max-w-full max-h-[75vh] rounded-xl border border-white/20 shadow-2xl object-contain"
             />
-            <p className="text-xs md:text-sm text-gray-200 text-center">
+            <p className="text-lg md:text-2xl text-gray-200 text-center">
               {images[activeIndex].label}
             </p>
-            <p className="text-[10px] md:text-xs text-gray-400 text-center">
+            <p className="text-[10px] md:text-sm text-gray-400 text-center">
               Gunakan tombol panah kiri (←) dan kanan (→) pada keyboard untuk
               berpindah gambar, atau tekan Esc untuk menutup.
             </p>

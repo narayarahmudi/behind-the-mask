@@ -4,6 +4,9 @@ import p2 from "../assets/proses-2.jpg";
 import p3 from "../assets/proses-3.jpg";
 import p4 from "../assets/proses-4.jpg";
 import p5 from "../assets/proses-5.jpg";
+import p6 from "../assets/proses-6.png"; 
+import p7 from "../assets/proses-8.png";
+import p8 from "../assets/topeng.jpg";
 
 import { RiPulseFill } from "react-icons/ri";
 
@@ -42,21 +45,21 @@ const Proses = () => {
     },
     {
       step: 6,
-      title: "Belum Naraya Isi",
-      src: "",
-      desc: "Belum Naraya Isi",
+      title: "Memberi Detail dan Memperjelas Pakaian",
+      src: p6,
+      desc: "Pada tahap ini, bagian pakaian diperjelas dengan menambahkan lipatan, bayangan, dan highlight pada warna merah gelap. Detail-detail tersebut membantu membangun kesan berat, rapuh, dan sedikit sesak, seolah tokoh sedang menanggung beban yang tidak terlihat. Penguatan bentuk dan tekstur pakaian juga membuat tubuh terasa lebih nyata, sehingga kontras antara topeng dan sosok di baliknya menjadi semakin kuat.",
     },
     {
       step: 7,
-      title: "Belum Naraya Isi",
-      src: "",
-      desc: "Belum Naraya Isi",
+      title: "Membuat Ulang dan Memperbagus Ranting",
+      src: p7,
+      desc: "Pada tahap ini, elemen ranting digambar ulang agar bentuknya lebih tegas dan dinamis. Detil halus seperti arah cabang, bayangan tipis, dan tekstur serat ditambahkan untuk memperkuat kesan rumit dan terjal. Ranting yang lebih jelas membantu menonjolkan simbol beban dan keruwetan yang mengelilingi tokoh.",
     },
     {
       step: 8,
-      title: "Belum Naraya Isi",
-      src: "",
-      desc: "Belum Naraya Isi",
+      title: "Penempelan Topeng",
+      src: p8,
+      desc: "Pada tahap ini, topeng badut asli ditempatkan sedikit di samping wajah tokoh dan dipasang menggunakan tali rafia. Penempatan di sisi wajah memberi kesan bahwa topeng adalah identitas kedua yang selalu menyertai tokoh, bukan sesuatu yang sedang dipakai. Elemen tiga dimensi ini memperkuat pesan tentang jarak antara diri yang terlihat dan diri yang sebenarnya.",
     },
   ];
 
@@ -90,7 +93,7 @@ const Proses = () => {
             <div
             data-aos='zoom-in'
             key={item.step}
-              className="bg-white/5 border border-white/10 rounded-xl overflow-hidden flex flex-col"
+              className="contrast-125 saturate-125 brightness-110 shadow-2xl shadow-black/50 bg-white/5 border border-white/10 rounded-xl overflow-hidden flex flex-col"
             >
               <div className="w-full h-[300px] md:h-[400px] overflow-hidden">
                 <img

@@ -1,9 +1,9 @@
 import React from "react";
 import TypingTitle from "./TypingTitle";
+import mainArt from "../assets/main-paintings.png"
 
 const Beranda = () => {
-  const heroImage =
-    "https://images.unsplash.com/photo-1516575355330-d4c7b3a86ac2?auto=format&fit=crop&w=1400&q=80"; // ganti pakai foto karya/temanya
+  const heroImage = {mainArt}
 
   return (
     <section
@@ -53,7 +53,7 @@ const Beranda = () => {
         <div className="order-2 md:order-2">
           <div data-aos="fade-left" className="relative rounded-2xl overflow-hidden border border-white/10 shadow-xl">
             <img
-              src={heroImage}
+              src={mainArt}
               alt="Ilustrasi tema Topeng Sosial"
               className="w-full h-[260px] md:h-[360px] object-cover"
             />

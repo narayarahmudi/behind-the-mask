@@ -17,7 +17,7 @@ const Refleksi = () => {
             <span className="text-gray-300">Karya “Topeng Sosial”</span>
           </h2>
           <p className="text-sm md:text-base text-gray-300 max-w-3xl" data-aos='fade-right'>
-            Bagian ini berisi renungan singkat dari kami sebagai pembuat karya:
+            Bagian ini berisi renungan singkat dari kami sebagai pembuat karya
             apa yang dipelajari, tantangan yang terasa, dan harapan yang ingin
             disampaikan melalui “Topeng Sosial”.
           </p>
