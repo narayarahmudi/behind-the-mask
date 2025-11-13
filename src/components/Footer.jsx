@@ -1,4 +1,5 @@
 import React from "react";
+import qrcode from "../assets/behind.png";
 
 const Footer = () => {
   return (
@@ -6,9 +7,9 @@ const Footer = () => {
       {/* Garis tipis accent */}
       <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-white/25 to-transparent" />
 
-      <div className="max-w-6xl mx-auto px-6 py-10 md:py-12 grid md:grid-cols-3 gap-8">
+      <div className="max-w-6xl mx-auto px-6 py-10 md:py-12 grid md:grid-cols-4 gap-8">
         {/* Brand / deskripsi */}
-        <div className="space-y-3">
+        <div className="space-y-3 md:col-span-1">
           <h3 className="text-lg font-semibold tracking-wide">
             Behind The Mask
           </h3>
@@ -72,6 +73,24 @@ const Footer = () => {
               <p className="text-gray-400">SMA Negeri 43 Jakarta</p>
             </li>
           </ul>
+        </div>
+
+        {/* QR CODE */}
+        <div className="space-y-3 text-center">
+          <h4 className="text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-400">
+            Scan QR
+          </h4>
+
+          <div className="mx-auto w-28 h-28 bg-white rounded-md overflow-hidden shadow-lg">
+            <img
+              src={qrcode}
+              alt="QR Code"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <p className="text-[11px] text-gray-500">
+          </p>
         </div>
       </div>
 
