@@ -194,9 +194,6 @@ const Masukan = () => {
             </div>
 
             <div className="flex items-center justify-between gap-3 flex-wrap">
-              <p className="text-[11px] text-gray-400">
-                Komentar akan langsung tersimpan di database Supabase.
-              </p>
               <button
                 type="submit"
                 disabled={!pesan.trim() || rating === 0 || loadingKirim}
