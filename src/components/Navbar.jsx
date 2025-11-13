@@ -306,8 +306,8 @@ const Navbar = () => {
             transition-all duration-300 ease-in-out
             ${
               open
-                ? "opacity-100 translate-y-[-20px]"
-                : "opacity-0 -translate-y-4 md:opacity-100 md:translate-y-0"
+                ? "opacity-100 translate-y-0 pointer-events-auto"
+                : "opacity-0 -translate-y-4 pointer-events-none md:opacity-100 md:translate-y-0 md:pointer-events-auto"
             }
 
             md:bg-transparent bg-black/80
