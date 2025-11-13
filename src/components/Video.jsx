@@ -3,7 +3,6 @@ import { RiVideoFill } from "react-icons/ri";
 
 
 const Video = () => {
-  // Kalau videonya kamu taruh di: public/video/topeng-sosial.mp4
   const videoSrc = "/video/topeng-sosial.mp4";
 
   return (

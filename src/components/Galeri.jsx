@@ -37,7 +37,7 @@ const Gallery = () => {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(null); // null = popup tertutup
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const openPreview = (index) => {
     setActiveIndex(index);
@@ -55,7 +55,6 @@ const Gallery = () => {
     setActiveIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
-  // Keyboard navigation
   useEffect(() => {
     if (activeIndex === null) return;
 
@@ -106,7 +105,7 @@ const Gallery = () => {
 
         {/* Main + detail images */}
         <div className="grid lg:grid-cols-3 gap-6">
-          {/* Karya utama (full) */}
+          {/* Karya utama*/}
           <div
             className="lg:col-span-2 cursor-pointer"
             onClick={() => openPreview(0)}
@@ -170,7 +169,7 @@ const Gallery = () => {
             <HiOutlineX />
           </button>
 
-          {/* Kontainer biar klik di gambar nggak nutup popup */}
+          {/* Kontainer */}
           <div
             className="max-w-[90%] max-h-[85%] flex flex-col gap-3 items-center"
             onClick={(e) => e.stopPropagation()}

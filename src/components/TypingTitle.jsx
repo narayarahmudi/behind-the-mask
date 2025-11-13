@@ -14,14 +14,12 @@ const TypingTitle = () => {
     const timeout = setTimeout(() => {
       setText(prev => {
         if (!isDeleting) {
-          // Mengetik
           const next = current.slice(0, prev.length + 1);
           if (next === current) {
             setTimeout(() => setIsDeleting(true), 1000); // Delay sebelum hapus
           }
           return next;
         } else {
-          // Menghapus
           const next = current.slice(0, prev.length - 1);
           if (next === "") {
             setIsDeleting(false);

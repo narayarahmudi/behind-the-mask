@@ -11,7 +11,6 @@
     const [loadingKirim, setLoadingKirim] = useState(false);
     const [loadingKomentar, setLoadingKomentar] = useState(true);
 
-    // Ambil komentar dari Supabase
     const fetchComments = async () => {
         setLoadingKomentar(true);
         const { data, error } = await supabase
@@ -27,7 +26,6 @@
         setLoadingKomentar(false);
     };
 
-    // Kirim komentar baru
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!pesan.trim() || rating === 0) return;
@@ -36,7 +34,7 @@
 
         const payload = {
         name: nama.trim() || "Anonim",
-        message: pesan.trim(), // pastikan kolom di Supabase namanya 'message'
+        message: pesan.trim(),
         rating: Number(rating),
         };
 
@@ -49,7 +47,6 @@
         if (error) {
         console.error("Gagal kirim komentar:", error);
         } else if (data) {
-        // langsung masukin ke atas list
         setKomentar((prev) => [data, ...prev]);
         setNama("");
         setPesan("");
@@ -60,7 +57,6 @@
         setLoadingKirim(false);
     };
 
-    // Format tanggal
     const formatDate = (iso) => {
         try {
         return new Date(iso).toLocaleString("id-ID", {
@@ -75,17 +71,14 @@
         }
     };
 
-    // Hitung rata-rata rating
     const averageRating =
         komentar.length > 0
         ? komentar.reduce((sum, k) => sum + (k.rating || 0), 0) / komentar.length
         : 0;
 
-    // Load awal + realtime
     useEffect(() => {
         fetchComments();
 
-        // Realtime jika ada INSERT baru
         const channel = supabase
         .channel("realtime:coments")
         .on(
@@ -119,7 +112,7 @@
             </h2>
             <p className="text-sm md:text-base text-gray-300 max-w-3xl" data-aos="fade-right">
                 Tinggalkan kesan atau komentar setelah melihat karya “Topeng Sosial”.
-                Masukan kalian akan disimpan di backend dan bisa dibaca dari mana saja.
+                Masukan kalian akan disimpan di komentar web ini dan bisa dibaca dari mana saja.
             </p>
             </div>
 
@@ -129,7 +122,7 @@
                 Tulis Masukanmu
             </h3>
 
-            {/* Rating bintang */}
+            {/* Rating */}
             <div className="space-y-1">
                 <p className="text-sm text-gray-300">Beri penilaian:</p>
                 <div className="flex items-center gap-1">
@@ -205,7 +198,6 @@
             </form>
             </div>
 
-            {/* Ringkasan rating */}
             <div className="flex items-center gap-3" data-aos="fade-right">
             <div className="flex items-center gap-1">
                 {[1, 2, 3, 4, 5].map((b) => {

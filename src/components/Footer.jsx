@@ -4,7 +4,6 @@ import qrcode from "../assets/behind.png";
 const Footer = () => {
   return (
     <footer className="w-full bg-black/90 text-white border-t border-white/10">
-      {/* Garis tipis accent */}
       <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-white/25 to-transparent" />
 
       <div className="max-w-6xl mx-auto px-6 py-10 md:py-12 grid md:grid-cols-4 gap-8">
