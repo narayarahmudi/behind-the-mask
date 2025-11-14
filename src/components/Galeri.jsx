@@ -114,7 +114,7 @@ const Gallery = () => {
               <img
                 src={mainImage.src}
                 alt={mainImage.label}
-                className="block contrast-125 saturate-125 brightness-110 shadow-2xl shadow-black/50 rounded-xl  w-full h-[320px] md:h-[700px] object-cover object-center group-hover:scale-[1.5] transition-transform duration-600 backdrop-blur-sm"
+                className="block contrast-125 saturate-125 brightness-110 shadow-2xl shadow-black/50 rounded-xl  w-full h-[320px] md:h-[700px] object-cover object-center group-hover:scale-[1.5] transition-transform duration-600 backdrop-blur-sm grayscale"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent md:opacity-0 opacity-100 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute bottom-4 left-4 right-4 md:opacity-0 backdrop-opacity-100 group-hover:opacity-100 transition-opacity duration-500">
@@ -145,7 +145,8 @@ const Gallery = () => {
                   w-full h-[150px] md:h-full
                   object-cover object-center
                   group-hover:scale-[1.05]
-                  transition-transform duration-500"
+                  transition-transform duration-500
+                  grayscale"
                 />
                 <div className="absolute inset-0 bg-black/60 md:opacity-0 opacity-100 md:group-hover:opacity-100 transition-opacity duration-300" />
                 <span className="absolute bottom-3 left-3 text-[11px] uppercase tracking-[0.2em] text--200 md:opacity-0 opacity-100 group-hover:opacity-100 transition-opacity duration-300">

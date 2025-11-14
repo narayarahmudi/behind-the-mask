@@ -1,9 +1,10 @@
 import React from "react";
 import { RiVideoFill } from "react-icons/ri";
+import video from "../assets/narasi.mp4"
 
 
 const Video = () => {
-  const videoSrc = "/video/topeng-sosial.mp4";
+  const videoSrc = "../assets/narasi.mp4";
 
   return (
     <section
@@ -24,11 +25,14 @@ const Video = () => {
         </div>
 
         {/* Video player */}
-        <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 bg-black" data-aos='zoom-in'>
+        <div
+          className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 bg-black flex items-center justify-center"
+          data-aos="zoom-in"
+        >
           <video
-            src={videoSrc}
+            src={video}
             controls
-            className="w-full h-full object-cover"
+            className="h-full object-contain w-auto custom-video"
           >
             Browser kamu tidak mendukung pemutar video HTML5.
           </video>

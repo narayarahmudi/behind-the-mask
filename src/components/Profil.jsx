@@ -1,5 +1,10 @@
 import React from "react";
 import { RiUserFill, RiInstagramFill } from "react-icons/ri";
+import fotoBersama from "../assets/foto-bersama-karya.jpg"
+import naraya from "../assets/naraya.png";
+import rijal from "../assets/rijal.png";
+import fadli from "../assets/fadli.png";
+import iji from "../assets/iji.png";
 
 
 const Profil = () => {
@@ -12,33 +17,33 @@ const Profil = () => {
       name: "Dava Naraya Rahmudi",
       role: "Sketsa dasar, pewarnaan utama, dan pembuatan website",
       photo:
-        "",
+        naraya,
       instagram:
         "@narayarahmudii",
     },
     {
       name: "Efrijal Dwi Saputra",
-      role: "...",
+      role: "Sketsa dasar, pewarnaan, Dokumentasi, Direktor kreatif",
       photo:
-        "",
+        rijal,
       instagram:
-        "@ig",
+        "@zepenzz",
     },
     {
       name: "Fadli Cahyo Ramadhan",
-      role: "...",
+      role: "Sketsa dasar, pewarnaan",
       photo:
-        "",
+        fadli,
       instagram:
-        "@ig",
+        "@ndaktau4813",
     },
     {
       name: "Muhammad Izzy Ma'Aly",
-      role: "...",
+      role: "Sketsa dasar, Pewarnaan, Dokumentasi",
       photo:
-        "",
+        iji,
       instagram:
-        "@ig",
+        "@zhaoozyshong",
     },
   ];
 
@@ -69,11 +74,11 @@ const Profil = () => {
         {/* Foto kelompok (landscape) */}
         <div className="w-full rounded-xl overflow-hidden border border-white/10 shadow-md relative group" data-aos="zoom-in">
           <img
-            src={groupPhoto}
+            src={fotoBersama}
             alt="Foto kelompok Topeng Sosial"
             className="w-full h-[250px] md:h-[500px] object-cover group-hover:scale-[1.02] transition-transform duration-500"
           />
-          <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/100 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           <div className="absolute bottom-4 left-4 text-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
             <p className="text-xs uppercase tracking-[0.2em] text-gray-300">
               Dokumentasi Kelompok
@@ -95,7 +100,7 @@ const Profil = () => {
               <img
                 src={m.photo}
                 alt={m.name}
-                className="w-full h-56 object-cover"
+                className="w-full h-70 object-cover"
               />
               <div className="p-4 text-center space-y-1">
                 <p className="text-lg font-medium text-white">{m.name}</p>
