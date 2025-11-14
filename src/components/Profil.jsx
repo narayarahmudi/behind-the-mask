@@ -76,7 +76,7 @@ const Profil = () => {
           <img
             src={fotoBersama}
             alt="Foto kelompok Topeng Sosial"
-            className="w-full h-[250px] md:h-[500px] object-cover group-hover:scale-[1.02] transition-transform duration-500"
+            className="w-full h-[300px] md:h-[500px] object-cover group-hover:scale-[1.02] transition-transform duration-500"
           />
           <div className="absolute inset-0 bg-linear-to-t from-black/100 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           <div className="absolute bottom-4 left-4 text-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -100,7 +100,7 @@ const Profil = () => {
               <img
                 src={m.photo}
                 alt={m.name}
-                className="w-full h-70 object-cover"
+                className="w-full md:h-70 h-150 sm:h-90 object-cover"
               />
               <div className="p-4 text-center space-y-1">
                 <p className="text-lg font-medium text-white">{m.name}</p>
